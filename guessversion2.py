@@ -30,8 +30,10 @@ class GuessingGame(EasyFrame):
         actual = self.myNumber
         if number == actual:
             self.messageBox(title="Correct!", message="you guessed correctly!!")
-        if number != actual:
-            self.messageBox(title="guess Again!", message="you guessed Incorrectly, guess again!")
+        if number < actual:
+            self.messageBox(title="guess Again!", message="you guessed Incorrectly, guess again. The number is higher!")
+        if number > actual:
+            self.messageBox(title="guess Again!", message="you guessed Incorrectly, guess again. The number is lower!")
 
 
 def main():
